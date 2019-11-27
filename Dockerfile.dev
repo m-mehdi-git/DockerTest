@@ -1,7 +1,12 @@
 FROM node:alpine
-WORKDIR /user/app
+
+WORKDIR /app
+
+ENV CHROME_BIN=/usr/bin/google-chrome
+
 COPY ./package.json ./
 RUN npm install
+RUN npm install -g @angular/cli@latest
 COPY ./ ./
 
-CMD ["npm", "start"]
+CMD ["ng","serve","--host", "0.0.0.0"]

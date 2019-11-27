@@ -29,6 +29,8 @@
             "scripts": []
           },
           "configurations": {
+            "docker": {
+              "poll": 500},
             "production": {
               "fileReplacements": [
                 {
