@@ -2,8 +2,6 @@ FROM node:alpine
 
 WORKDIR /app
 
-ENV CHROME_BIN=/usr/bin/google-chrome
-
 COPY ./package.json ./
 RUN npm install
 RUN npm install -g @angular/cli@latest
